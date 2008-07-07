@@ -4,7 +4,7 @@
 
 <h3>Student Editing</h3>
 
-<form>
+<form action="/student" method="POST" >
   
   {% if not s._id %}
   <b>new user</b>
@@ -24,6 +24,28 @@
       <th>Email</th>
       <td>{{ s._form.text( "email" ) }}</td>
     </tr>
+
+
+    <tr>
+      <th>Street</th>
+      <td>{{ s._form.text( "address.street" ) }}</td>
+    </tr>
+
+    <tr>
+      <th>City</th>
+      <td>{{ s._form.text( "address.city" ) }}</td>
+    </tr>
+
+    <tr>
+      <th>State</th>
+      <td>{{ s._form.text( "address.state" ) }}</td>
+    </tr>
+
+    <tr>
+      <th>Postal Code</th>
+      <td>{{ s._form.text( "address.postalCode" ) }}</td>
+    </tr>
+
     
   </table>
 

@@ -3,12 +3,13 @@
   <body>
 
     <h2>Student Example</h2>
+    <a href="/students">Student List</a>
     <hr>
     
     {% if msg %}
     {{ msg }}
     {% endif %}
-
+    
     {% block "content" %}
     
     Student Example HomePage

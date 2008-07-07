@@ -13,9 +13,15 @@
   <tr>
     <td>{{ s.name }} </td>
     <td>{{ s.email }} </td>
+    <td><a href="/student?s__id={{ s._id }}">edit</a></td>
+    <td><a href="/student?action=Delete&s__id={{ s._id }}">delete</a></td>
   </tr>
   {% endfor %}
   
 </table>
+
+<br>
+
+<a href="/student">New Student</a>
 
 {% endblock %}

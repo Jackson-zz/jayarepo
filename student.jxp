@@ -5,6 +5,12 @@ var data = {};
 {
     var myStudent = Student.findOne( request.s__id , true );
     
+    if ( request.action == "Delete" ){
+        myStudent.remove();
+        response.sendRedirectTemporary( "/students" );
+        return;
+    }
+
     if ( request.action == "Save" ){
         
         Forms.fillInObject( "s_" , myStudent , request );

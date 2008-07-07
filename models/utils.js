@@ -4,7 +4,7 @@
 
 Address = function(s,c,st,pc) {
    this.street = s||"";
-   this.city = c||"";
+   this.city = c||"asd";
    this.state = st||"";
    this.postalCode = pc||"";
 }
