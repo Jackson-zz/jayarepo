@@ -20,7 +20,6 @@ Student.prototype.addScore = function(course, grade) {
 
 Student.prototype._transientFields = [ "gpa" , "_form" ];
 
-Student.__proto__ = new ModelBase( "students" );
-Student.cons = Student;
+Student.__proto__ = new ModelBase( "students" , Student );
 
 
