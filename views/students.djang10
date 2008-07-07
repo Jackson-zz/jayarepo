@@ -1,0 +1,21 @@
+{% extends "/local/views/base" %}
+
+{% block "content" %}
+
+<h3>Students</h3>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  {% for s in ss %}
+  <tr>
+    <td>{{ s.name }} </td>
+    <td>{{ s.email }} </td>
+  </tr>
+  {% endfor %}
+  
+</table>
+
+{% endblock %}

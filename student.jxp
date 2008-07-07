@@ -1,0 +1,28 @@
+<% 
+
+var data = {};
+
+{
+    var myStudent = Student.findOne( request.s__id , true );
+    
+    if ( request.action == "Save" ){
+        
+        Forms.fillInObject( "s_" , myStudent , request );
+        
+        if ( myStudent._new ){
+            delete myStudent._new;
+        }
+        
+        myStudent.save();
+        data.msg = "Saved";
+        
+    }
+    
+    myStudent._form = new Forms.Form( myStudent , "s_" );
+    
+    data.s = myStudent;
+}
+
+local.views.student( data );
+   
+%>

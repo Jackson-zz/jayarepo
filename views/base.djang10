@@ -1,0 +1,23 @@
+<html>
+  
+  <body>
+
+    <h2>Student Example</h2>
+    <hr>
+    
+    {% if msg %}
+    {{ msg }}
+    {% endif %}
+
+    {% block "content" %}
+    
+    Student Example HomePage
+
+    {% endblock %}
+
+    <hr>
+    <center><small>blah blah blah</small></center>
+
+  </body>
+</html>
+

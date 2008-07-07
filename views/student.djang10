@@ -1,0 +1,33 @@
+{% extends "/local/views/base" %}
+
+{% block "content" %}
+
+<h3>Student Editing</h3>
+
+<form>
+  
+  {% if not s._id %}
+  <b>new user</b>
+  {{ s._form.hidden( "_new" , true ) }}
+  {% endif %}
+
+  {{ s._form.id() }}
+
+  <table>
+
+    <tr>
+      <th>Name</th>
+      <td>{{ s._form.text( "name" ) }}</td>
+    </tr>
+
+    <tr>
+      <th>Email</th>
+      <td>{{ s._form.text( "email" ) }}</td>
+    </tr>
+    
+  </table>
+
+  {{ s._form.submit( "action" , "Save" ) }}
+
+</form>
+{% endblock %}
