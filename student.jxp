@@ -2,7 +2,12 @@
 
 var data = {};
 
-{
+if ( request.action == "list" ){
+    data.ss = Student.find().limit( 50 ).sort( { name : 1 } );
+    
+    local.views.students( data );
+}
+else {
     var myStudent = Student.findOne( request.s__id , true );
     
     if ( request.action == "Delete" ){
@@ -27,8 +32,10 @@ var data = {};
     myStudent._form = new Forms.Form( myStudent , "s_" );
     
     data.s = myStudent;
+    
+    local.views.student( data );
 }
 
-local.views.student( data );
+
    
 %>

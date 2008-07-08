@@ -2,7 +2,7 @@
   
   <body>
 
-    <h2>Student Example</h2>
+    <h2><a href="/">Student Example</a></h2>
     <a href="/students">Student List</a>
     <hr>
     
@@ -12,12 +12,13 @@
     
     {% block "content" %}
     
-    Student Example HomePage
-
+    This is one of the 10gen sample applications<br>
+    The code for this example is available at <a href="http://github.com/10gen/sample-student">github</a><br>
+    
     {% endblock %}
 
     <hr>
-    <center><small>blah blah blah</small></center>
+    <center><small>no copyright, have fun</small></center>
 
   </body>
 </html>

@@ -1,8 +1,0 @@
-<%
-
-   var data = {};
-   
-data.ss = Student.find().limit( 50 ).sort( { name : 1 } );
-
-   local.views.students( data );
-%>
