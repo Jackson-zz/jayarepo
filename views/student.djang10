@@ -52,4 +52,24 @@
   {{ s._form.submit( "action" , "Save" ) }}
 
 </form>
+
+
+{% if s._id %}
+<h3>Scores</h3>
+<table border="1">
+  {% for sc in s.scores %}
+  <tr>
+    <td>{{ sc.for_course }}</td>
+    <td>{{ sc.grade }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<form>
+  {{ s._form.id() }}
+  {{ s._form.select( "course_for" , null , courses ) }}
+  {{ s._form.select( "score" , null , [ "A" , "B" , "C" ] ) }}
+  {{ s._form.submit( "action" , "Add" ) }}
+</form> 
+{% endif %}
+
 {% endblock %}

@@ -18,13 +18,15 @@ else if ( data.c && request.action == "Delete" ){
 }
 else if ( data.c && request.action == "Edit" ){
 }
-else if ( data.c && request.action == "Save" ){
+else if ( request.action == "Save" ){
     data.c = data.c || new Course();
     Forms.fillInObject( "c_" , data.c , request );
     data.c.save();
+    data.c = null;
 }
 else if ( request.action == "New" ){
     data.c = new Course();
+    
 }
 
 if ( data.c ){

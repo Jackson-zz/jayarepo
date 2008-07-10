@@ -1,5 +1,6 @@
 
-// this contains objects that aren't 1st class (don't have their own collection in the db)
+// this contains objects that aren't 1st class
+// (don't have their own collection in the db)
 
 
 Address = function(s,c,st,pc) {

@@ -8,11 +8,13 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
+    <th>Number of Courses</th>
   </tr>
   {% for s in ss %}
   <tr>
     <td>{{ s.name }} </td>
     <td>{{ s.email }} </td>
+    <td>{{ s.scores.length }} </td>
     <td><a href="/student?s__id={{ s._id }}">edit</a></td>
     <td><a href="/student?action=Delete&s__id={{ s._id }}">delete</a></td>
   </tr>
