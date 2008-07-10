@@ -4,5 +4,5 @@ Course = function(name) {
 
 Course.prototype.toString = function() { return 'Course ' + this.name; }
 
-db.courses.setConstructor(Course);
+Course.__proto__ = new ModelBase( "courses" , Course );
 

@@ -3,7 +3,10 @@
   <body>
 
     <h2><a href="/">Student Example</a></h2>
-    <a href="/students">Student List</a>
+    <ul>
+      <li><a href="/students">Student List</a></li>
+      <li><a href="/courses">Course List</a></li>
+    </ul>
     <hr>
     
     {% if msg %}

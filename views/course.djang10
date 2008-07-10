@@ -1,0 +1,28 @@
+{% extends "/local/views/base" %}
+
+{% block "content" %}
+
+<h3>Course Editing</h3>
+
+<form action="/course" method="POST" >
+  
+  {% if not c._id %}
+  <b>new course</b>
+  {{ c._form.hidden( "_new" , true ) }}
+  {% endif %}
+
+  {{ c._form.id() }}
+
+  <table>
+
+    <tr>
+      <th>Name</th>
+      <td>{{ c._form.text( "name" ) }}</td>
+    </tr>
+    
+  </table>
+
+  {{ c._form.submit( "action" , "Save" ) }}
+
+</form>
+{% endblock %}
