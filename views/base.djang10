@@ -1,5 +1,9 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   
+  <head>
+	<link type="text/css" rel="stylesheet" href="/assets/sample.css" />
+  </head>
+
   <body>
 
     <h2><a href="/">Student Example</a></h2>
@@ -7,7 +11,7 @@
       <li><a href="/students">Student List</a></li>
       <li><a href="/courses">Course List</a></li>
     </ul>
-    <hr>
+    <hr />
     
     {% if msg %}
     {{ msg }}
@@ -15,13 +19,12 @@
     
     {% block "content" %}
     
-    This is one of the 10gen sample applications<br>
-    The code for this example is available at <a href="http://github.com/10gen/sample-student">github</a><br>
+    <p>This is one of the 10gen sample applications</p>
+    <p>The code for this example is available at <a href="http://github.com/10gen/sample-student">github</a></p>
     
     {% endblock %}
 
-    <hr>
-    <center><small>no copyright, have fun</small></center>
+    <p id="footer">no copyright, have fun</p>
 
   </body>
 </html>
