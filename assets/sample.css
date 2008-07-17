@@ -111,7 +111,7 @@ form {
 }
 
 label {
-	margin: 10px 5px 0 0;
+	margin: 1em .5em 0 0;
 	display: block;
 	float: left;
 	width: 10em; 
@@ -119,12 +119,13 @@ label {
 }
 
 input {
-	margin: 5px 0 0 0;
+	margin: 1em 0 0 0;
 }
 
 fieldset {
 	padding: 1em;
 	width: 30em;
+	border: 1px solid #999;
 }
 
 p#footer {
