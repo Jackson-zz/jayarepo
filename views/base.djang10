@@ -24,8 +24,6 @@
     
     {% endblock %}
 
-    <p id="footer"></p>
-
   </body>
 </html>
 
