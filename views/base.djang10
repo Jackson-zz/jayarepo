@@ -24,7 +24,7 @@
     
     {% endblock %}
 
-    <p id="footer">no copyright, have fun</p>
+    <p id="footer"></p>
 
   </body>
 </html>
