@@ -2,6 +2,8 @@
 
 {% block "content" %}
 
+{% autoescape off %}
+
 <h3>Student Editing</h3>
 
 <form action="/student" method="POST" >
@@ -71,5 +73,7 @@
   {{ s._form.submit( "action" , "Add" ) }}
 </form> 
 {% endif %}
+
+{% endautoescape %}
 
 {% endblock %}
