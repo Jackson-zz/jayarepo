@@ -7,24 +7,22 @@
 <h3>Course Editing</h3>
 
 <form action="/course" method="POST" >
-  
+
+  <fieldset>  
   {% if not c._id %}
-  <b>new course</b>
+    <legend>New Course</legend>
   {{ c._form.hidden( "_new" , true ) }}
   {% endif %}
 
   {{ c._form.id() }}
 
-  <table>
-
-    <tr>
-      <th>Name</th>
-      <td>{{ c._form.text( "name" ) }}</td>
-    </tr>
+    <label>Name</label>
+    {{ c._form.text( "name" ) }}<br />
     
-  </table>
+    <label></label>	
+  	{{ c._form.submit( "action" , "Save" ) }}<br />
 
-  {{ c._form.submit( "action" , "Save" ) }}
+  </fieldset>
 
 </form>
 

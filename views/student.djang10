@@ -7,58 +7,45 @@
 <h3>Student Editing</h3>
 
 <form action="/student" method="POST" >
-  
+
+  <fieldset>  
   {% if not s._id %}
-  <b>new user</b>
+    <legend>New User</legend>
   {{ s._form.hidden( "_new" , true ) }}
   {% endif %}
 
   {{ s._form.id() }}
 
-  <table>
+	<label>Name</label>
+    {{ s._form.text( "name" ) }}<br />
 
-    <tr>
-      <th>Name</th>
-      <td>{{ s._form.text( "name" ) }}</td>
-    </tr>
+	<label>Email</label>
+	{{ s._form.text( "email" ) }}<br />
 
-    <tr>
-      <th>Email</th>
-      <td>{{ s._form.text( "email" ) }}</td>
-    </tr>
+	<label>Street</label>
+    {{ s._form.text( "address.street" ) }}<br />
 
+	<label>City</label>
+	{{ s._form.text( "address.city" ) }}<br />
 
-    <tr>
-      <th>Street</th>
-      <td>{{ s._form.text( "address.street" ) }}</td>
-    </tr>
+	<label>State</label>
+    {{ s._form.text( "address.state" ) }}<br />
 
-    <tr>
-      <th>City</th>
-      <td>{{ s._form.text( "address.city" ) }}</td>
-    </tr>
-
-    <tr>
-      <th>State</th>
-      <td>{{ s._form.text( "address.state" ) }}</td>
-    </tr>
-
-    <tr>
-      <th>Postal Code</th>
-      <td>{{ s._form.text( "address.postalCode" ) }}</td>
-    </tr>
-
+	<label>Postal Code</label>
+    {{ s._form.text( "address.postalCode" ) }}<br />
     
-  </table>
+	<label></label>
+  	{{ s._form.submit( "action" , "Save" ) }}<br />
 
-  {{ s._form.submit( "action" , "Save" ) }}
+	</fieldset>
 
 </form>
 
 
 {% if s._id %}
 <h3>Scores</h3>
-<table border="1">
+
+<table class="grid" cellpadding="0" cellspacing="0">
   {% for sc in s.scores %}
   <tr>
     <td>{{ sc.for_course }}</td>
