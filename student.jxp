@@ -34,7 +34,7 @@ else {
     if ( request.action == "Add" && request.course_for ){
         var c = Course.findOne( request.course_for );
         if ( ! c ){
-            c.msg = "Can't find course";
+            data.msg = "Can't find course";
         }
         else {
             myStudent.scores.push( new Score( c , request.score ) );
