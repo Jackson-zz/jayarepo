@@ -1,5 +1,3 @@
-<%
-
 var data = {};
 
 data.cs = Course.find().limit( 100 ).sort( { name : 1 } );
@@ -37,4 +35,3 @@ if ( data.c ){
 
 template( data );
 
-%>

@@ -14,8 +14,8 @@ core.core.routes();
 
 routes = new Routes();
 
-routes.student = "/student.jxp";
-routes.add( "students" , "/student.jxp" , { extra : { action : "list" } } );
+routes.student = "/student";
+routes.add( "students" , "/student" , { extra : { action : "list" } } );
 
 routes.add( "courses" , "course" , { extra : { action : "list" } } );
 

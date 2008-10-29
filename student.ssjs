@@ -1,5 +1,3 @@
-<% 
-
 var data = {};
 
 if ( request.action == "list" ){
@@ -49,7 +47,3 @@ else {
     
     local.views.student( data );
 }
-
-
-   
-%>
