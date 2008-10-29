@@ -2,8 +2,6 @@
 
 {% block "content" %}
 
-{% autoescape off %}
-
 <h3>Course Editing</h3>
 
 <form action="/course" method="POST" >
@@ -25,7 +23,5 @@
   </fieldset>
 
 </form>
-
-{% endautoescape %}
 
 {% endblock %}
