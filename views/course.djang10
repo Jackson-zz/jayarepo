@@ -4,9 +4,11 @@
 
 <h3>Course Editing</h3>
 
+{% autoescape off %}
+
 <form action="/course" method="POST" >
 
-  <fieldset>  
+  <fieldset>
   {% if not c._id %}
     <legend>New Course</legend>
   {{ c._form.hidden( "_new" , true ) }}
@@ -16,12 +18,14 @@
 
     <label>Name</label>
     {{ c._form.text( "name" ) }}<br />
-    
-    <label></label>	
+
+    <label></label>
   	{{ c._form.submit( "action" , "Save" ) }}<br />
 
   </fieldset>
 
 </form>
+
+{% endautoescape %}
 
 {% endblock %}

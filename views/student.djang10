@@ -4,9 +4,10 @@
 
 <h3>Student Editing</h3>
 
+{% autoescape off %}
 <form action="/student" method="POST" >
 
-  <fieldset>  
+  <fieldset>
   {% if not s._id %}
     <legend>New User</legend>
   {{ s._form.hidden( "_new" , true ) }}
@@ -31,14 +32,14 @@
 
 	<label>Postal Code</label>
     {{ s._form.text( "address.postalCode" ) }}<br />
-    
+
 	<label></label>
   	{{ s._form.submit( "action" , "Save" ) }}<br />
 
 	</fieldset>
 
 </form>
-
+{% endautoescape %}
 
 {% if s._id %}
 <h3>Scores</h3>
@@ -51,12 +52,14 @@
   </tr>
   {% endfor %}
 </table>
+{% autoescape off %}
 <form>
   {{ s._form.id() }}
   {{ s._form.select( "course_for" , null , courses ) }}
   {{ s._form.select( "score" , null , [ "A" , "B" , "C" ] ) }}
   {{ s._form.submit( "action" , "Add" ) }}
-</form> 
+</form>
+{% endautoescape %}
 {% endif %}
 
 {% endblock %}
